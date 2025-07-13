@@ -115,6 +115,21 @@ app.delete('/api/reservas/:id', async (req, res) => {
   }
 });
 
+// Reutilizamos la autenticación básica
+app.use('/panel', (req, res, next) => {
+  const auth = req.headers.authorization;
+  if (auth === authString) next();
+  else {
+    res.set('WWW-Authenticate', 'Basic realm="Panel Semanal"');
+    res.status(401).send('Autenticación requerida');
+  }
+});
+
+app.get('/panel', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'panel.html'));
+});
+
+
 app.listen(process.env.PORT, () => {
   console.log(`Servidor activo en http://localhost:${process.env.PORT}`);
 });
