@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dolce Nails - Reserva tu cita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reserva-panel">
+        <h1>Dolce Nails</h1>
+        <h2>Reserva tu cita</h2>
+        <form id="reservaForm">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required inputmode="tel" maxlength="15">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <div id="horas-disponibles"></div>
+            <input type="hidden" id="hora" name="hora" required>
+
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="manicura">Manicura</option>
+                <option value="pedicura">Pedicura</option>
+                <option value="uñas acrílicas">Uñas Acrílicas</option>
+                <option value="esmaltado semipermanente">Esmaltado Semipermanente</option>
+            </select>
+
+            <button type="submit">Reservar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

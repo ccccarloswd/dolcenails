@@ -1,0 +1,142 @@
+body {
+  background: linear-gradient(135deg, #e8ebf0 0%, #f5f6f8 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* PANEL CENTRAL */
+.reserva-panel {
+  background: #ffffff;
+  max-width: 460px;
+  margin: 40px auto;
+  padding: 36px 30px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(40, 50, 70, 0.1);
+  text-align: center;
+}
+
+/* TÍTULOS */
+.reserva-panel h1 {
+  color: #2f3e56;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.1em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+}
+
+.reserva-panel h2 {
+  color: #4e5c70;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin-bottom: 1.6em;
+}
+
+/* FORMULARIO */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* CAMPOS */
+label {
+  text-align: left;
+  color: #4e5c70;
+  font-size: 0.95em;
+  margin-bottom: 0.3em;
+}
+
+input, select {
+  padding: 0.75em;
+  border: 1px solid #c7ccd6;
+  border-radius: 8px;
+  font-size: 0.95em;
+  background-color: #f9fafa;
+  transition: border-color 0.2s, background-color 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #3c4f6b;
+  background-color: #ffffff;
+  outline: none;
+}
+
+/* FECHA */
+input[type="date"] {
+  transition: box-shadow 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: #3c4f6b;
+  box-shadow: 0 0 8px rgba(60, 79, 107, 0.2);
+}
+
+/* HORARIOS */
+#horas-disponibles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 1em 0 1.2em 0;
+  justify-content: center;
+  min-height: 2.5em;
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+
+.hora-btn {
+  background: #f9fafa;
+  border: 1.5px solid #3c4f6b;
+  color: #3c4f6b;
+  border-radius: 7px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, transform 0.18s;
+}
+
+.hora-btn.selected,
+.hora-btn:hover:not(:disabled) {
+  background-color: #3c4f6b;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px rgba(60, 79, 107, 0.1);
+}
+
+.hora-btn:disabled {
+  background-color: #ececec;
+  color: #b1b1b1;
+  border-color: #d6d6d6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* BOTÓN PRINCIPAL */
+button {
+  background: linear-gradient(90deg, #3c4f6b 0%, #5a7090 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5em;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #2e3e54 0%, #4a5e78 100%);
+}
+
+/* MENSAJE */
+#mensaje {
+  margin-top: 1.2em;
+  color: #3c4f6b;
+  font-weight: 600;
+  min-height: 1.5em;
+  font-size: 0.95em;
+}
